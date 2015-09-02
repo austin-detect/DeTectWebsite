@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>DeTect, Inc. - Air and Marine Surveillance and Security radars - Visual Warning Systems - Obstruction Lighting Activation Radar - UAV Radar</title>
+    <link rel="shortcut icon" href="http://www.detect-inc.com/images/favicon.ico"/>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Media Styles -->
+    <link href="css/A-Styles.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" style="position:fixed;background-color:#000" role="navigation">
+        <div class="container" >
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img alt=""  src="http://www.detect-inc.com/images/Logo_DeTect_Inc.png"  class="h-auto-style1" style="z-index: 12000;float: left;width: 250px;height:50px;" />
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav" style="text-align:center;">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href=""></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html">Home</a>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Connect<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown"><a href="https://www.facebook.com/DeTectRadar?v=info" class="dropdown-toggle" target="_blank" >Facebook</a></li>
+                            <li class="dropdown"><a href="https://www.youtube.com/user/DeTectBirdRadar/featured" class="dropdown-toggle" target="_blank" >Youtube</a></li>
+                            <li class="dropdown"><a href="https://www.linkedin.com/company/detect?trk=tabs_biz_home" class="dropdown-toggle" target="_blank" >LinkedIn</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="careers.html">Careers</a>
+                    </li> 
+                    <li>
+                        <a class="page-scroll" href="contacts.html">Contact</a>
+                    </li>                    
+              </ul>
+                
+            </div>
+            
+        <div class="row-fluid nav-right pull-right">
+            <ul class="text-center list-unstyled container-fluid collapse" id="searchForm">
+                <li class="row-fluid">
+                    <div class="searchform span">
+                        <form id="q" method="get" action="search.aspx?q">
+		                    <input id="Text1" size="20" name="q" class="form-control search-form" style=" color:#CCCCCC; background-color:#333333; width: 152px; height: 25px; margin-left: 0px;" value="Search"/>
+		                    <input type="hidden" name="sp-a" value="00080a9e-sp00000000"/>
+		                </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row" style="margin-top:-150px;">
+            <div class="col-lg-12" style="visibility:hidden">
+                <h1 class="page-header">Sidebar Page
+                    <small>Subheading</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Sidebar Page</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h1>Products</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="list-group">
+                                    <a href="merlin.html" class="list-group-item">Aircraft Birdstrike Avoidance</a>
+                                    <a href="avian.html" class="list-group-item">Avian & Bat Radar Systems</a>
+                                    <a href="security.html" class="list-group-item">Security & Surveillance Radars</a>
+                                    <a href="wind.html" class="list-group-item">Wind Energy Bird & Bat Radars</a>
+                                    <a href="bird_control_radar.html" class="list-group-item">Bird Control Radar Systems</a>
+                                    <a href="security.html#vws" class="list-group-item">Obstruction Lighting Radar Systems</a>
+                                    <a href="profiler.html" class="list-group-item">Radar Wind Profilers</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h1>Informational Downloads</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="list-group">
+                                    <a href="mailto:contact@detect-inc.com" class="list-group-item" style="text-decoration:underline">Catalog - HARRIER Security & Surveillance Radars, 19 pages (request copy)</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20Security/Technical%20Data%20Sheet%20-%20HARRIER%20ASR%20MSR%202p%200908.pdf" class="list-group-item" style="text-decoration:underline">Technical Data Sheet - HARRIER Security & Surveillance Radars</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20Security/TDS%20-%20HARRIER%20DSR%20200d%20150406US.pdf" class="list-group-item" style="text-decoration:underline">Technical Data Sheet - HARRIER Drone Surveillance Radar (DSR)</a>
+                                    
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20Security/Technical%20Data%20Sheet%20-%20HARRIER%20Border%20Security%20Radar%20120102.pdf" class="list-group-item" style="text-decoration:underline">Technical Data Sheet - HARRIER Border Security Radar Systems</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20Security/Technical%20Data%20Sheet%20-%20HARRIER%20Sense%20&%20Avoid%20r.ra.120807.pdf" class="list-group-item" style="text-decoration:underline">Technical Data Sheet - HARRIER Sense-and-Avoid Radar Systems</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20Security/Technical%20Data%20Sheet%20-%20HARRIER%20Visual%20Warning%20System%201110.pdf" class="list-group-item" style="text-decoration:underline">Technical Data Sheet - HARRIER Visual Warning System</a>
+                                    
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20Security/Advantages%20of%20Solid-State%20Based%20Security%20&%20Surveillance%20Radar%20Systems%20r.ga.121030.pdf" class="list-group-item" style="text-decoration:underline">Advantages of Solid State Radar Sensors for Security Applications</a>
+                                    <a href="mailto:contact@detect-inc.com" class="list-group-item" style="text-decoration:underline">Whitepaper - Detection of Small Drones in Urban Environments (request copy)</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20info%20-%20wind/Poster%20-%20DeTect's%20VWS%20-%20AWEA%20WINDPOWER%202013%20web%20r.kv.130328.pdf" class="list-group-item" style="text-decoration:underline">Paper - DeTect's Visual Warning System (VWS) for Automatic Activation of Obstruction Lighting at Wind Farms, Kelley, Voltura, et al., presented at WINDPOWER 2013, Chicago, Illinois, May 2013</a>
+                                    
+                                    <a href="http://www.detect-inc.com/DeTect%20info%20-%20wind/Paper%20-%20Challenges%20and%20Solutions%20of%20Remote%20Sensing%20for%20Offshore%20Wind%20Energy%20Developments%20-%20Kelly%20et%20al,%20MAREE%202009.pdf" class="list-group-item" style="text-decoration:underline">Paper - DeTect's Visual Warning System (VWS) for Automatic Activation of Obstruction, Lighting at Wind Farms, Kelly et al., EWEA Vienna Austria, February 2013</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <!-- Embedded Google Map -->
+                <h1>
+                    <img width="270" height="65" align="right" alt="" src="http://www.detect-inc.com/images/Logo HARRIER 2014.jpg"></img>
+                    SECURITY & SURVEILLANCE RADAR SYSTEMS
+
+                </h1>
+                <br />
+                <p>
+                    <img width="270" height="207" align="right" alt="HARRIER Air Surveillance Radar for border security" src="http://www.detect-inc.com/images/HARRIER ASR towered high 2014.jpg"></img>
+                    DeTect's radar processing technology developed specifically for reliable detection and tracking of small, non-cooperative, low radar-cross section, non-linearly moving targets make it one of the most sensitive, low cost radar systems on the market today for security and surveillance applications. DeTect's HARRIER line of radars can be used for airspace and marine security applications to monitor a wide range of targets including aircraft, ultralights, drones, unmanned aerial systems, helicopters, ships, and boats. HARRIER provides full, multi-functional surveillance coverage from ground level to altitudes above 20,000 feet AGL with simultaneous air and marine detection, tracking and intrusion alerting HARRIER is an ideal, cost-effective solution for many force protection and homeland and industrial security applications. HARRIER shares a common platform with DeTect's MERLIN system that was designed specifically for detection and tracking of small radar cross section (RCS) targets in high clutter environments, and offers the highest level of performance available for detection, tracking and identification of drones and small UAVs.
+                </p>
+
+                <p>
+                    HARRIER applications include: 
+
+                </p>
+                <ul>
+                    <li>
+                        Airspace monitoring & surveillance
+                    </li>
+                    <li>
+                        Aircraft detection & tracking
+                    </li>
+                    <li>
+                        Public event drone detection
+                    </li>
+                    <li>
+                        Marine and coastal surveillance
+                    </li>
+                    <li>
+                        Airspace sense-and-avoid
+                    </li>
+                    <li>
+                        Border intrusion detection
+                    </li>
+                    <li>
+                        Ultralight & Drone interdiction
+                    </li>
+                    <li>
+                        <a style="text-decoration:underline;color:#555;" target="_blank" href="#vws">Obstruction lighting activation</a>
+                    </li>
+                    <li>
+                        Perimeter air & marine security
+                    </li>
+                    <li>
+                        Shoreline protection
+                    </li>
+                </ul>
+                <h2>
+                    Applications: 
+
+                </h2>
+                <p>
+                    <img width="250" height="154" align="left" alt="HARRIER Drone Surveillance Radar mobile display showing drone tarcks and probable launch/control sites" src="http://www.detect-inc.com/images/HARRIER drone surveillance radar mobile display web.png"></img>
+                    Systems are offered in various base configurations that include the HARRIER Airspace Surveillance Radar (ASR) and the Marine Surveillance Radar (MSR). With multiple parallel processors, the radar can operate as a multi-function system providing ASR and MSR functionality from a single radar sensor or network of sensors. All HARRIER systems use state-of-the-art solid-state Doppler radar technology developed by DeTect specifically for detection of low RCS targets in high clutter environments in target optimized S-band, X-band and combined S/X-band radar frequencies. DeTect's solid-state radar technology offers significant increased performance, longer useful life and lower maintenance costs over conventional magnetron-based systems.
+
+                </p>
+                <p>
+                    HARRIER applications include a wide range of sites, types, sizes and configurations from single facilities to large-area or linear radar networks for force protection and facility security, including:
+
+                </p>
+                <ul>
+                    <li>
+                        Commercial & civil aviation airports
+                    </li>
+                    <li>
+                        Public, sporting & race events
+                    </li>
+                    <li>
+                        Military airfields & ranges
+                    </li>
+                    <li>
+                        Rocket launch complexes
+                    </li>
+                    <li>
+                        UAV & UAS operation support
+                    </li>
+                    <li>
+                        Obstruction lighting activation
+                    </li>
+                    <li>
+                        Government installations
+                    </li>
+                    <li>
+                        Industrial plants, refineries & power plants
+                    </li>
+                    <li>
+                        Ports, waterways & coastlines
+                    </li>
+                    <li>
+                        Borders High security facilities
+                    </li>
+                    <li>
+                        Wind farm gap filler
+                    </li>
+                </ul>
+                <h2>
+                    Interoperability & Integrated Technology: 
+
+                </h2>
+                <p>
+                    <img width="260" height="198" align="left" alt="HARRIER security & surveillance radars are fully remotely controllable and viewable" src="http://www.detect-inc.com/images/HARRIER AAC display launch control room 1002.jpg"></img>
+                    HARRIER systems can operate as a stand alone security/ force protection radar system detecting and alerting perimeter intrusions by air and water. The system can be programmed to detect intruders (vehicles, ships, boats, aircraft, ultralights, UAVs) crossing a pre-set site perimeters or zones, providing automated visual and audible notifications to security forces by text message, pager or cellular phone or direct read-out at remote monitoring stations. HARRIER ASR systems can also be used as a gap filler radar provide data for navigation and military surveillance radars in areas blocked by terrain or structures including wind turbine farms.
+
+                </p>
+                <p>
+                    <img width="225" height="201" align="right" alt="HARRIER inlcudes a SDK for intergration with third party sensors" src="http://www.detect-inc.com/images/HARRIER tower with radar-directed cameras.jpg"></img>
+                    HARRIER radars are use high speed scanning for enhanced small target detection in high clutter environments such as developed areas, terrain and high sea states. Systems are optimized for detection of small targets that includes small motorized high-speed watercraft, floating objects, low flying aircraft and ultralights. Automatic detection and tracking includes user-definedÂ monitoring and alarm zones. Systems are offered in fixed skid and mobile configurations and can be linearly networked to cover large areas and lines such as border crossings, coastlines and large facilities. DeTect's technology is highly customizable providing radar, video, and thermal detection and acoustic deterrent through a single user interface display with advanced alerting and response features all viewable and controllable remotely in real-time. HARRIER features include:
+
+                </p>
+                <ul>
+                    <li>
+                        Microsoft Windows-based operating software
+                    </li>
+                    <li>
+                        User displays & interfaces developed for non-technical user
+                    </li>
+                    <li>
+                        Integrated radar, thermal, video, acoustic, sonar & deterrents
+                    </li>
+                    <li>
+                        Intelligent Radar feature provides real-time target identification
+                    </li>
+                    <li>
+                        Automatic false positive (birds) rejection
+                    </li>
+                    <li>
+                        Display activated "point-and-click" video zoom & deterrent activation
+                    </li>
+                    <li>
+                        Compatible with other security & display systems
+                    </li>
+                    <li>
+                        Site-specific underlay maps
+                    </li>
+                    <li>
+                        Mobile mapping technology
+                    </li>
+                    <li>
+                        Identifies & tracks each target by size, position, speed & heading
+                    </li>
+                    <li>
+                        Audible & visual intrusion alarms
+                    </li><a id="vws" name="vws"></a>
+                    <li>
+                        Optional notification by email & radio pager
+                    </li>
+                    <li>
+                        Automated data recording, archiving & reporting
+                    </li>
+                </ul>
+                    
+                <h2>
+                    Visual Warning Systems:
+
+                </h2>
+                <p>
+                    <img width="329" height="250" align="right" alt="HARRIER Visual Warning System for transmission line abstruction lighting activation" src="http://www.detect-inc.com/images/HARRIER VWS 1411.jpg"></img>
+                    In response to the Dark Sky initiative to reduce light pollution and customer demand, DeTect developed the HARRIER Visual Warning System automatic obstruction lighting activation system. The system provides continuous 360 degree radar surveillance of the airspace around a wind farms, communications towers, power lines and installations that require aircraft obstruction lighting from the ground level to above aircraft flight altitudes, automatically issuing warnings to activate obstruction lighting when aircraft are detected at a defined outer perimeter. HARRIER is the most capable technology for available and meets or exceeds all regulatory requirements including the pending US FAA and Canadian NAVCAN requirements and well as various EU standards. The HARRIER VWS additionally is compatible with all wind energy turbines, control and communication networks, and obstruction lighting systems.
+
+                </p>
+                <p>
+                    <img width="250" height="149" align="left" alt="HARRIER Air Surveillance Radar web display at major US Airshow in 2014" src="http://www.detect-inc.com/images/HARRIER ASR SATAS 2235.png"></img>
+                    The HARRIER VWS collision avoidance system is based on DeTect's proven HARRIER ASR used for non-cooperative aircraft detection & UAV sense-and-avoid VWS application provides aircraft detection out to 30 miles, tracking & lighting activation (through SCADA or direct interfaces). The HARRIER VWS is a highly customizable for each site and application with multiple alert zones and activation perimeters, and is available as stand-alone system or integrated with other sensors and warning devices such as audible beacons. The design incorporates redundant sensors and back-up detectors that include TCAS and ADSB receivers for a greater safety and reliability margin. With DeTect's MERLIN processor add-on, a HARRIER VWS can additionally provide VWS and bird radar functionality from a common sensor platform.
+
+                </p>
+                <p>
+                    HARRIER VWS advantages include: 
+
+                </p>
+                <ul>
+                    <li>
+                        Long range capability provides greater margin of safety
+                    </li>
+                    <li>
+                        Compatible with all turbines, communication networks & lighting systems
+                    </li>
+                    <li>
+                        Low cost of acquisition & O&M State-of-the-art solid state
+                    </li>
+                    <li>
+                        Doppler solid-state radar technology
+                    </li>
+                    <li>
+                        Lower installation cost, ground-based sensor packages
+                    </li>
+                    <li>
+                        Multi-function capable for bird & intruder detection
+                    </li>
+                    <li>
+                        Backed by full parts & labor warranty
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <table style="width:108%" class="right-panel">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h1>Featured Video</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="list-group">
+                                    <div href="" class="list-group-item">
+                                        <p align="center">
+                                            <iframe width="250" height="141" frameborder="0" allowfullscreen="" src="http://www.youtube.com/embed/cY__fDaWR5Y?&autoplay=1&rel=0&f…showinfo=0&modestbranding=1&color=white&playlist=cY__fDaWR5Y"></iframe>
+                                        </p>
+                                        <p align="left">
+                                            HARRIER Air Surveillance Radar Web display from the Synthetic Air Traffic Advisory System (SATAS) 'Virtual Tower' demonstration project at the Lakeland Sun 'n Fun Fly-in - DeTect has deployed a mobile HARRIER S200d ASR system as part of the SATAS Virtual Tower Demonstration Project at the Lakeland Linder Regional Airport near Orlando, Florida. The HARRIER system is providing aircraft detection and tracking with remote, real-time user display for aircraft and ultralights within 20 miles of the airport (<a target="_blank" style="text-decoration:underline;color:#555;" href="http://www.youtube.com/watch?v=NEetX41QskY&feature=share&list=PLqP1O2jU47FntlyevsTuDtpACd6LlGspR&index=1">see higher resolution version</a>).
+                                        </p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table style="width:108%" class="right-panel">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h1>Representative Projects</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="list-group">
+                                    <div href="" class="list-group-item">
+                                        <p align="center">
+                                            <img width="250" height="183" align="middle" alt="HARRIER UAS Sense-and-avoid radar systems for Boeing Insitu Group" src="http://www.detect-inc.com/images/HARRIER Boeing Insitu UAV Airspace sense-and-avoid radar system.jpg"></img></p>
+                                        <p align="left">
+                                            <strong>HARRIER S200 Airspace Monitoring Radar for Boeing Insitu Group, Seattle, Washington USA</strong>
+                                             - Airspace surveillance support radar for aircraft, ultralight and unmanned aerial systems detection and operating support. The system includes a state-of-the-art solid state radar with Doppler processing for detection and tracking of cooperative and non-cooperative targets to ranges out to 30 miles. The system includes a lightning detection system and TCAS receiver unit. The system is currently in certification testing by the US Federal Aviation Administration for UAS operational support. 
+                                        </p>
+                                        <p align="center">
+                                            <img width="250" height="183" align="middle" alt="HARRIER dual-function marine and airspace surveillance radar system" src="http://www.detect-inc.com/images/HARRIER ASR-MSR Alaska Aerospace Corporation.jpg"></img></p>
+                                        <p align="left">
+                                            <strong>HARRIER Airspace/Marine Surveillance Radar System, Alaska Aerospace Corporation, Kodiak Launch Complex, Alaska USA</strong>
+                                             - dual function airspace (ASR) and marine surveillance radar (MSR) system supporting rocket launch operations at the AAC Kodiak, Alaska facility. The HARRIER system is used to provide airspace and marine monitoring and intrusion control during launch operations for non-cooperative aircraft, with detection to 20 miles, and small boat and ship detection to 10 miles offshore (see
+                                            <a style="text-decoration:underline;color:#555;" href="http://www.akaerospace.com" target="_blank">www.akaerospace.com</a>).
+                                        </p>
+                                        <p align="center">
+                                            <img width="250" height="203" align="middle" alt="Air Traffic Control tower HARRIER air surveillance radar display" src="http://www.detect-inc.com/images/HARRIER Airport tower display.jpg"></img> 
+                                        </p>
+                                        <p align="left">
+                                            <strong>HARRIER S30 Air Surveillance Radar, Central Wisconsin Airport, Mosinee, USA</strong>
+                                             - DeTect manufactured, installed and supports a HARRIER radar system used by the midwestern US airport to detect and track aircraft entering its airspace providing alerts to airport operators in the air traffic control tower. The system is a fixed tower unit installed on the airfield and provides aircraft detection and tracking to 24 miles around the airport at altitudes up to 15,000 ft AGL with automated intrusion zone monitoring. 
+                                        </p>
+                                        <p align="center">
+                                            <img width="250" height="188" align="middle" alt="HARRIER S200d ASR umannaed aerial system support radar" src="http://www.detect-inc.com/images/HARRIER ISR Air Surveillance Radar fixed.jpg"></img></p>
+                                        <p align="left">
+                                            <strong>HARRIER S30 ASR/WX/LX Radar System, Evergreen Unmanned Systems, Oregon USA</strong>
+                                             - Detect designed, manufactured and supports a mobile HARRIER Airspace Surveillance Radar (ASR) system with weather monitoring (WX), lighting detection (LX) supporting A-20 Insight UAV operations. Evergreen concentrates on commercial, unmanned aerial surveillance with both maritime and land-based applications. The HARRIER system provides UAV operators real-time aircraft see-and-avoid, weather and lightning detection information with a 24 nm detection range.
+                                        </p>
+                                        <p align="center">
+                                            <object width="250" height="188">
+                                                <param value="http://www.youtube.com/v/uqkDx1Q2BAI&autoplay=1&rel=0&fs=0&l…modestbranding=1&autohide=1&color=white&playlist=uqkDx1Q2BAI" name="movie"></param>
+                                                <param value="false" name="allowFullScreen"></param>
+                                                <param value="always" name="allowscriptaccess"></param>
+                                                <embed width="250" height="188" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" src="http://www.youtube.com/v/uqkDx1Q2BAI&autoplay=1&rel=0&fs=0&l…modestbranding=1&autohide=1&color=white&playlist=uqkDx1Q2BAI"></embed>
+
+                                            </object>
+                                        </p>
+                                        <p>
+                                            HARRIER Visual Warning System display (<a style="text-decoration:underline;color:#555;" target="_blank" href="https://www.youtube.com/watch?v=uqkDx1Q2BAI&list=UUIvftz8Xg1uD4g4tD0SH7MQ&index=1&feature=plcp">large video</a>) for obstruction lighting activation at a western US wind farm that provides continuous airspace intrusion monitoring , automatically notifying the wind farm control system when aircraft are detected approaching, activating obstruction lights, with the light deactivating when the aircraft leaves the area (<a style="text-decoration:underline;color:#555;" target="_blank" href="http://www.detect-inc.com/security.html#vws">more information to the left</a>).
+                                        </p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        
+
+    </div><!-- Footer -->
+        <footer>
+                <p align="center">
+                    Copyright &copy; 2003-2015 DeTect, Inc. www.detect-inc.com
+                </p>
+        </footer>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

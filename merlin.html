@@ -1,0 +1,615 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>MERLIN Aircraft Birdstrike Avoidance Radars - bird strike prevention, flight safety, BASH management, bird-aircraft collision avoidance</title>
+    <link rel="shortcut icon" href="http://www.detect-inc.com/images/favicon.ico"/>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Media Styles -->
+    <link href="css/A-Styles.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" style="position:fixed;background-color:#000" role="navigation">
+        <div class="container" >
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img alt=""  src="http://www.detect-inc.com/images/Logo_DeTect_Inc.png"  class="h-auto-style1" style="z-index: 12000;float: left;width: 250px;height:50px;" />
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav" style="text-align:center;">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href=""></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html">Home</a>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Connect<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown"><a href="https://www.facebook.com/DeTectRadar?v=info" class="dropdown-toggle" target="_blank" >Facebook</a></li>
+                            <li class="dropdown"><a href="https://www.youtube.com/user/DeTectBirdRadar/featured" class="dropdown-toggle" target="_blank" >Youtube</a></li>
+                            <li class="dropdown"><a href="https://www.linkedin.com/company/detect?trk=tabs_biz_home" class="dropdown-toggle" target="_blank" >LinkedIn</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="careers.html">Careers</a>
+                    </li> 
+                    <li>
+                        <a class="page-scroll" href="contacts.html">Contact</a>
+                    </li>                    
+              </ul>
+                
+            </div>
+            
+        <div class="row-fluid nav-right pull-right">
+            <ul class="text-center list-unstyled container-fluid collapse" id="searchForm">
+                <li class="row-fluid">
+                    <div class="searchform span">
+                        <form id="q" method="get" action="search.aspx?q">
+		                    <input id="Text1" size="20" name="q" class="form-control search-form" style=" color:#CCCCCC; background-color:#333333; width: 152px; height: 25px; margin-left: 0px;" value="Search"/>
+		                    <input type="hidden" name="sp-a" value="00080a9e-sp00000000"/>
+		                </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row" style="margin-top:-150px;">
+            <div class="col-lg-12" style="visibility:hidden">
+                <h1 class="page-header">Sidebar Page
+                    <small>Subheading</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Sidebar Page</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h1>Products</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="list-group">
+                                    <a href="merlin.html" class="list-group-item">Aircraft Birdstrike Avoidance</a>
+                                    <a href="avian.html" class="list-group-item">Avian & Bat Radar Systems</a>
+                                    <a href="security.html" class="list-group-item">Security & Surveillance Radars</a>
+                                    <a href="wind.html" class="list-group-item">Wind Energy Bird & Bat Radars</a>
+                                    <a href="bird_control_radar.html" class="list-group-item">Bird Control Radar Systems</a>
+                                    <a href="security.html#vws" class="list-group-item">Obstruction Lighting Radar Systems</a>
+                                    <a href="profiler.html" class="list-group-item">Radar Wind Profilers</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h1>Informational Downloads</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="list-group">
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Technical%20Data%20Sheet%20-%20MERLIN%20Aircraft%20Birdstrike%20Avoidance%20Radar%20012815US.pdf" class="list-group-item" style="text-decoration:underline">Technical Data Sheet - MERLIN Aircraft Birdstrike Avoidance Radar systems</a>
+                                    <a href="mailto:contact@detect-inc.com" class="list-group-item" style="text-decoration:underline">Catalog & Specification- MERLIN Aircraft Birdstrike Avoidance Radar system, 32 pages (request copy)</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Advantages%20of%20Solid-state%20Based%20Avian%20Radar%20Systems%20r.ga.120903.pdf" class="list-group-item" style="text-decoration:underline">US Air Force Air Force Instruction (AFI) 91-202, The USAF Mishap Prevention Program, July 2012</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20Downloads/USAF%20AFI%2091-202%20120711%20comp.pdf" class="list-group-item" style="text-decoration:underline">US Federal Aviation Administration Advisory Circular 150/5220-25, Avian Radar Guidance, 2010</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Paper%20-%20Bird%20Strike%20-%20Using%20Radar%20to%20Study%20Bird%20Ecology%20-%20Coates%20et%20al%202010.pdf" class="list-group-item" style="text-decoration:underline">Article - Bird Strike : Using Radar to Study Bird Ecology, Coates, Casazza, Fleskes & Laughlin, California Waterfowl Winter 2010</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Paper%20-%20How%20Bird%20Radars%20Can%20Make%20Our%20Skies%20Safer%20Today%20final%20GWA%20090801.pdf" class="list-group-item" style="text-decoration:underline">Paper - How Bird Radars Can Make Our Skies Safer Today, Andrews, Birdradar.com</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Article_-_Beware-of_the_Birds_IEEE.pdf" class="list-group-item" style="text-decoration:underline">Article - Beware of the Birds, IEEE Potentials, Kelly, DeTect, Inc.</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Article%20-%20Bird%20Detection%20Radar%20Goes%20Commercial%20-%20Air%20Traffic%20Tech%20Intl%20Merritt%202011.pdf" class="list-group-item" style="text-decoration:underline">Article - Bird Detection Goes Commercial, Air Traffic Technology 2011, Merritt (Maj. USAF retired)</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Article%20-%20One%20Strike%20and%20You're%20Out%20-%20Air%20Traffic%20Intl,%20-%20Gary%20Andrews%200908.pdf" class="list-group-item" style="text-decoration:underline">Article - One Strike and You're Out, Air Traffic Technology 2010, Andrews, DeTect, Inc.</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Article%20-%20MERLIN%20ABAR%20-%20Turkish%20Officers%20Visit%20Offutt%20AFB%20seeking%20BASH%20Solution%20110724.pdf" class="list-group-item" style="text-decoration:underline">Article - Turkish Officers Visit Offutt Seeking BASH Solution, Air Force Today</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Paper%20-%20Integrating%20Avian%20Radar%20into%20Airport%20Operations%20-%20Sowden%20et%20al%20BSC%202009.pdf" class="list-group-item" style="text-decoration:underline">Paper - Integrating Avian Radar into Airport Operations, Bird Strike Committee 2009, Sowden et al.</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Paper%20-%20Managing%20Birdstrike%20Risk%20with%20Information%20Technologies%20-%20T.%20Adam%20Kelly%203p%20BSC%202005.pdf" class="list-group-item" style="text-decoration:underline">Paper - Managing Birdstrike Risk with Information Technologies, Bird Strike Committee USA-Canada 2005, Kelly</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Paper%20-%20Using%20Avian%20Radar%20to%20Examine%20Relationships%20between%20Avian%20Activity,%20Bird%20Strikes,%20and%20Meteorological%20Factors%20-%20USGS%20Coates%20et%20al%20DRAFT%201101.pdf" class="list-group-item" style="text-decoration:underline">Paper - Using Avian Radar to examine Relationships Among Avian Activity, Bird Strikes and Meteorological Factors by USDA and USGS, Human Wildlife Interactions, Fall 2011</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Paper%20-%20MERLIN%20ATC%20An%20Advanced%20Avian%20Radar%20Display%20for%20Automated%20Bird%20Strike%20Risk%20Determination.pdf" class="list-group-item" style="text-decoration:underline">Paper - MERLIN ATC, An Advanced Avian Radar Display for Automated Bird Strike Risk Determination, Bird Strike Committee 2007, Kelly et al.</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Articles%20-%20BASH,%20AHAS%20&%20MERLIN%20-%20USAF%20Flying%20Safety%201999-2006%2036p.pdf" class="list-group-item" style="text-decoration:underline">Articles - BASH & Bird Detection Radars, USAF Flying Safety, series from 1999-2006, Kelly et al.</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Paper%20-%20Personal%20and%20Corporate%20Liability%20After%20Birdstrikes%20-%20Dale%202009.pdf" class="list-group-item" style="text-decoration:underline">Paper - Personal and Corporate Liability in the Aftermath of Birdstrikes: A Costly Consideration, Human Wildlife Conflicts Fall 2009</a>
+                                    <a href="http://www.detect-inc.com/DeTect%20-%20ABAR/Paper%20-%20The%20Costs%20of%20Bird%20Strikes%20and%20Bird%20Strike%20Prevention%20-%20Dr.%20John%20Allen%20CSL%207p%20BSC%202002.pdf" class="list-group-item" style="text-decoration:underline">Paper - The Costs of Birdstrikes, Allan 2002, UK Central Science Lab)</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <!-- Embedded Google Map -->
+                <h1 style="color:#333;text-align:left;">
+                    Aircraft Birdstrike Avoidance Radars
+                </h1>
+                <p>
+                    <img width="186" height="65" align="right" alt="" src="http://www.detect-inc.com/images/Logo MERLIN ABAR 2014.jpg"></img>
+                    Bird-aircraft strikes pose a significant safety hazard to aircraft, pilots and passengers and, according to government studies, cost military and commercial aviation over $2 billion each year due to aircraft loss and damage, out-of-service delays and lost lives.
+                </p>
+                <br />
+                <h2 style="color:#400080;font-size:20px;">
+                    The MERLIN System:
+                </h2>
+                <p>
+                    <img width="285" class="indexImage" height="216" align="right" alt="MERLIN bird strike prevention radars are available in fixed and mobile installation designs" src="http://www.detect-inc.com/images/MERLIN ABAR BOS Jet Blue Tower right.jpg"></img>
+                        DeTect's MERLIN Aircraft Birdstrike Avoidance Radar system is the first and only production bird strike radar system and is the most advanced and widely-used technology available for bird-aircraft strike hazard (BASH) management and for real-time detection, tracking and alerting of hazardous bird activity at commercial airports, military airfields, and military training and bombing ranges. The MERLIN avian radar is proven, operational technology with over 140 MERLIN systems currently operating at sites worldwide in aviation safety and environmental applications.
+
+                </p>
+                <p>
+                    <strong>
+                         MERLIN has a documented record in reducing bird strikes, increasing safety and reducing aircraft damage and delay costs at both military and commercial airfields.
+                    </strong>
+                    MERLIN is also the only bird radar system to have been evaluated and certified for real-time, tactical flight safety use by the US government (includes NASA and the USAF certifications and approvals) and is the only bird radar approved for and in use at a commercial airport control tower under national flight safety standards. The MERLIN technology includes a wide range of unique features and benefits not available with any other system:
+
+                </p>
+                <br />
+                <ul>
+                    <li>
+                        Operational, production-model technology
+                    </li>
+                    <li>
+                        Real-time display of bird activity with the highest available update rates
+                    </li>
+                    <li>
+                        Precise, tactical, automated bird-aircraft strike risk alerts to controllers & pilots
+                    </li>
+                    <li>
+                        Mobile, real-time information displays for airfield bird control units
+                    </li>
+                    <li>
+                        Detects birds from ground level to above aircraft operational altitudes
+                    </li>
+                    <li>
+                        State-of-the-art solid-state S-band Doppler radar technology
+                    </li>
+                    <li>
+                        Reliable bird detection in up to moderate fog, rain & snow conditions
+                    </li>
+                    <li>
+                        Military-grade bird detection tracking algorithms & clutter suppression
+                    </li>
+                    <li>
+                        Real-time target filtering by size & mass for hazardous bird activity
+                    </li>
+                    <li>
+                        Operating software developed specifically for detection & tracking of birds
+                    </li>
+                    <li>
+                        Simultaneous multi-range operation to support both ATC & bird control
+                    </li>
+                    <li>
+                        Full remote control and real-time information display to multiple users
+                    </li>
+                    <li>
+                        SQL datasystem with automatic daily report generation engine
+                    </li>
+                    <li>
+                        Complete design, installation, commissioning & long-term support
+                    </li>
+                    <li>
+                        Comprehensive parts & labor warranty & performance guarantees
+                    </li>
+                </ul>
+                <h2>
+                    Expertise & Resources:
+                </h2>
+                <p>
+                    <img width="270" height="237" align="left" alt="MERLIN bird strike prevention systems are available in both fixed and mobile designs " src="http://www.detect-inc.com/images/MERLIN birdstrike radar fixed installtion left.jpg"></img>
+                    With MERLIN, users get more than just a radar - each MERLIN system is supported by DeTect's experts in military and commercial aviation safety, air traffic control, airfield management, airfield bird control and radar remote sensing to provide a cost-effective system that integrates seamlessly and effectively into airfield or airport operations. The standard MERLIN system uses a dual vertical and horizontal scanning radar configuration to provide simultaneous 3-D coverage with dedicated scanning of critical runways and approach and departure corridors (where over 85% of airfield bird-aircraft strikes occur) from the ground level up to 15,000 ft AGL and 360 degrees around the airfield out to 8+ miles. 
+                </p>
+                <p>
+                    <img width="285" height="225" align="right" alt="Typical MERLIN sensor plan for a multi-runway airport" src="http://www.detect-inc.com/images/MERLIN Bird Strike Radar Commercial Airport Layout right.jpg"></img>
+                    MERLIN systems are available in mobile and fixed skid unit installation configurations. For large, multi-runway airports and airfields, multiple fixed-mount sensor packages are installed around the airfield and networked to provide optimal coverage of the airfield and the area around the airport with dedicated vertical scanning of each runway and into approach and departure corridors providing continuous risk alerting and delivering precise real-time information where risk conditions exist. Commercial airport installations can be delivered as fixed radar packages with frangible radar towers and electronics installed in compact, outdoor-rated, environmentally controlled NEMA-certified enclosures. Power and network infrastructure is minimal and all components are fully remote controllable at system remote display user sites. MERLIN is scalable and expandable which allows users to install a base system initially, adding additional sensor coverages as budgets allow. All components are industrial grade with high reliability and low maintenance costs.
+                </p>
+                <h2>
+                    Features & Advantages:
+
+                </h2>
+                <p>
+                    <img class="indexImage" width="337" height="200" align="left" alt="MERLIN Web-based birdstrike risk display with color-coded risk levels and zones" src="http://www.detect-inc.com/images/MERLIN ABAR Display Web Advisor OAFB 1411.jpg"></img>
+                    In MERLIN, hazardous bird target positional information is delivered in real time to multiple local and remote users simultaneous in operationally usable formats with user-selectable display options that include color-coded symbols, unique identifiers for birds and aircraft, target trails and target tags with a range of attribute display options. DeTect's unique MERLIN Advisor risk alerting software continuously monitors bird activity in the runway approach and departure corridors and around the airfield automatically determining the current birdstrike risk for each corridor with the risk displayed onto the screen in color-coded text (as LOW, MODERATE, or SEVERE risk levels) and risk condition color options (GREEN, YELLOW, RED) that can be interpreted and used in the high tempo environment in control towers. Tower controllers, airfield managers and bird control staff are automatically alerted to real-time and expected changes in the risk condition by user-selectable, visual, audible and text message warning options. 
+
+                </p>
+                <p>
+                    <img width="250" height="297" align="right" alt="MERLIN Aircraft Birdstrike Radar data report from the MERLINsql datasystem" src="http://www.detect-inc.com/images/MERLIN ABAR Data Report Example 1411.jpg"></img>
+                    MERLIN Advisor is the only proven and operationally used automated bird strike risk monitoring and alerting system available on the market and represents the state-of-the-art in real time birdstrike risk management for commercial airports and military airfields. All target data attributes are also continuously written to the MERLIN SQL database system for playback, archiving and analysis with the Data Analyzer software that includes standard "point-and-click" queries. The integrated MERLIN Reporter feature automatically generates a set of custom or standard BASH management reports and emails them to users at the end of each 24 hour period. Data are also exportable to a GIS for integration into customer resource and planning databases. MERLIN additionally includes an optional incident recorder module that retains 48-72 hours of full radar data to support event and mishap investigations. 
+
+                </p>
+                <p>
+                    Advantages of the MERLIN system include:
+
+                </p>
+                <ul>
+                    <li>
+                        Automated real-time monitoring, warning & alerting of birdstrike risk
+                    </li>
+                    <li>
+                        User-selectable visual, audible & messaging risk alert options
+                    </li>
+                    <li>
+                        Detection and tracking software developed specifically for birds & aviation safety
+                    </li>
+                    <li>
+                        Largest 3-D airspace scan volume
+                    </li>
+                    <li>
+                        Fastest update rate
+                    </li>
+                    <li>
+                        Most accurate x-y-z bird target positional information
+                    </li>
+                    <li>
+                        Developed and supported by top BASH & aviation safety experts
+                    </li>
+                    <li>
+                        Proven in airport, military airfield & training range installations worldwide
+                    </li>
+                    <li>
+                        Fully remote viewable & controllable through LAN, WAN, Internet & wireless
+                    </li>
+                    <li>
+                        Wide range of standard & custom functions & features
+                    </li>
+                    <li>
+                        Used by the US Air Force, NASA & major airports for real-time, tactical bird detection
+                    </li>
+                </ul>
+                <br />
+                <p>
+                    The MERLIN bird radar operating software was specifically developed to detect and track the unique characteristics of bird targets and includes specialized ground clutter suppression to provide reliable, precise detection and tracking of birds from near ground level to above aircraft flight altitudes (85% of airport/airfield birdstrikes occur below 500 feet altitude). MERLIN also uses advanced solid-state S-band, 10-centimeter wavelength radar sensors optimized for bird detection that display and issue birdstrike alerts only for medium and larger size birds, including flocks, which minimizes false positives that can cause inaccurate strike risk advisories yet ensures that all target size risk classes are reliably detected.
+                </p>
+                <h2>
+                    Design & Engineering
+
+                </h2>
+                <p>
+                    <img width="260" height="198" align="left" alt="MERLIN bird strike radars are engineered and manufactured by…rovide long-term, reliable 24-7 operation with low O&M costs" src="http://www.detect-inc.com/images/MERLIN ARS bird strike radar skid left.jpg"></img>
+                    MERLIN uses state-of-the-art solid-state S-band radar sensors with Doppler processing providing all weather detection and tracking of birds even in fog, rain and snow. The solid-state radars in MERLIN have been engineered and manufactured specifically for bird detection and offer greater sensitivity than traditional magnetron-based bird radar systems which are susceptible to false positives from insect contamination and are "blind" in wet fog or even light rain. Low visibility conditions such as wet fog and rain represent the highest risk period to aircraft as bird control units, controllers and pilots cannot "see" the birds and the birds cannot "see and avoid" the aircraft. MERLIN systems are available in mobile and custom, multi-sensor fixed configurations for coverage of larger airports and for military airfields with multiple runways to provide full 3D airspace coverage with precise altitude data on bird targets.
+
+                </p>
+                <p>
+                    MERLIN is a fully integrated and engineered system that is manufactured by DeTect in its own factory and includes temperature and humidity controlled field technician equipment consoles/enclosures, radar data processors and software, radar towers, and military/AOA airfield lighting and marking. Mobile MERLIN systems are fully mission deployable via ground, ship or air transport for forward-base use and are air transport certified (USAF ATTLA). With the optional secondary surveillance radar (SSR) and multi-function HARRIER surveillance and weather options, the MERLIN system can support military theater operations delivering simultaneous, real-time birdstrike risk management, weather/lightning detection and/or airspace and perimeter surveillance and intrusion alerting, all from a single, compact fully mobile, hardened and self-contained platform.
+
+                </p>
+                <h2>
+                    Expert Application Support
+
+                </h2>
+                <p>
+                    <img width="285" height="154" align="right" alt="MERLIn is backed by the most experienced team of bird radar experts in the world" src="http://www.detect-inc.com/images/MERLIN staff 100th left.jpg"></img>
+                    <strong>With MERLIN, users are getting more than an aircraft birdstrike avoidance radar system.</strong>
+                    DeTect provides comprehensive application support with each system delivery that includes full concept-of-operations (CONOPS) development, system integration and site-specific operation training and long-term support. Each system is supported by DeTect's team of application specialists who have extensive backgrounds and experience in radar systems, BASH management and airfield operations. Staff resources supporting each MERLIN deployment include a former Chief of the US Air Force BASH Team, a former Head of US Air Force Europe Bird Control, FAA Qualified Biologists, NTSB Trained Mishap Investigators, former USDA Airfield Wildlife Control Officers, and noted international experts in radar ornithology and BASH with experience gained on projects at over 300 airports and airfields worldwide. DeTect's expert staff have been responsible for virtually every major development in bird radar technology for the past 30 years that includes the following bird radar industry "Firsts":
+
+                </p>
+                <ul>
+                    <li>
+                        Permanent bird radar system installation at a western European airport (2012)
+                    </li>
+                    <li>
+                        Advanced user customizable infinite birdstrike risk zone alerting (2011)
+                    </li>
+                    <li>
+                        Bird radar system with Doppler processing (2010)
+                    </li>
+                    <li>
+                        Dynamic Trending functionality in automated birdstrike risk warning system (2009)
+                    </li>
+                    <li>
+                        Active war zone deployment of a tactical bird strike radar (Afghanistan, 2009)
+                    </li>
+                    <li>
+                        Custom bird radar 'Bird Mode' waveform & antenna (2009)
+                    </li>
+                    <li>
+                        All weather solid-state bird radar system (2009)
+                    </li>
+                    <li>
+                        Birdstrike risk alerts to a commercial airport tower (2008, Durban IAP, S. Africa)
+                    </li>
+                    <li>
+                        Automated birdstrike risk alerting bird radar (2006, USAF, Dover AFB)
+                    </li>
+                    <li>
+                        Bird radar system at commercial airport (2003, Augusta Regional Airport, Georgia)
+                    </li>
+                    <li>
+                        On-airfield bird detection radar (2003, Royal Air Force Base, Kinloss Scotland)
+                    </li>
+                    <li>
+                        Biological target detection algorithm for radar (2001)
+                    </li>
+                    <li>
+                        Automatic vertical scanning radar for bird detection (2000)
+                    </li>
+                    <li>
+                        National bird strike risk radar network (1999, AHAS, <a style="text-decoration:underline;color:#555;" href="http://www.usahas.com" >www.usahas.com</a>, USAF)
+                    </li>
+                    <li>
+                        Base-level Bird Avoidance Model (1997, USAF)
+                    </li>
+                    <li>
+                        Computer-based birdstrike risk mission planning model (1996, USAF)
+                    </li>
+                    <li>
+                        Year-round remote sensing studies of bird activity (1995, USAF)
+                    </li>
+                </ul>
+                <p>
+                    MERLIN systems are offered for sale, long-term lease or short-term rental, with or without DeTect operators and are backed by a full parts and labor warranty that covers the complete system. Since 2003, over 140 MERLIN bird radar systems have logged over 5 million hours of operating time with an established record of high system uptime, high reliability and low maintenance and repair costs.
+                </p>
+            </div>
+            <div class="col-md-3">
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h1>Featured Video</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="list-group">
+                                    <a href="" class="list-group-item">
+                                        <p align="center">
+                                            <iframe  width="251" style="z-index:-1" height="141" frameborder="0" wmode="Opaque"  src="//www.youtube.com/embed/llL_S_P2PX0?list=PLqP1O2jU47Fl_xaGfCtUYJRwU_YUt38Uq&wmode=transparent"></iframe>
+                                        </p>
+                                        <p align="left">
+                                            MERLIN Aircraft Birdstrike Avoidance Radar System display of the strike risk alerting display.  
+                                        </p>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table style="width:108%" class="right-panel">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h1>Representative Projects</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="list-group">
+                                    <div href="" class="list-group-item">
+                                    
+                                        <p align="center">
+
+                                            <img width="225" height="150" alt="MERLIN bird radar system installed at the new Warsaw Modlin airport in Poland in 2012" src="http://www.detect-inc.com/images/MERLIN bird radar system at the new Warsaw Modlin airport in Poland.jpg"></img>
+
+                                        </p>
+                                        <p align="left">
+
+                                            <strong>US Air Force 55th Wing Offutt AFB, Nebraska USA</strong>
+
+                                             - WMI is the new reliever airport for Warsaw and is only the second European airport and the fourth in the world to install a bird radar for real-time operational use. The MERLIN system was selected under a competitive tender process and provides continuous detection and automatic alerting of hazardous bird activity with remote information display and warning of birdstrikes in the air traffic control tower
+
+                                        </p>
+                                        <p align="center">
+
+                                            <img width="225" height="149" alt="MERLIN Aircraft Birdstrke Avoidance Radar USAF Offutt AFB" src="http://www.detect-inc.com/images/MERLIN ABAR USAF Offutt AFB.jpg"></img>
+
+                                        </p>
+                                        <p align="center">
+
+                                            <strong>US Air Force 55th Wing Offutt AFB, Nebraska USA</strong>
+
+                                             - MERLIN XS2530i Aircraft Birdstrike Avoidance Radar System provides real-time birdstrike risk alerts to the air traffic control tower via fiber optic link. The USAF reports a significant reduction in birdstrikes after the system was installed while increasing airspace utilization (
+
+                                            <a style="text-decoration:underline;color:#555;" href="http://www.offutt.af.mil/news/story_print.asp?id=123264749" target="_blank">see AirForce Today article</a>
+                                            ).
+
+
+                                        </p>
+                                        <p align="center">
+
+                                            <img width="225" height="142" alt="MERLIN birdstrike radar installation at Riga International Airport in Latvia" src="http://www.detect-inc.com/images/MERLIN bird radar at Riga IAP.jpg"></img>
+                                        </p>
+                                        <p align="center">
+                                            <strong>Riga International Airport (RIX), Latvia</strong>
+
+                                             - MERLIN SS200i Aircraft Birdstrike Avoidance Radar System operating since 2010 and providing real-time detection and alerting of hazardous bird activity with remote information display and warning of birdstrikes in the air traffic control tower (
+
+                                            <a style="text-decoration:underline;color:#555;" href="http://www.offutt.af.mil/news/story_print.asp?id=123264749" target="_blank">more information</a>
+                                            ).
+                                        </p>
+                                        <p></p>
+
+                                        <p align="center">
+
+                                            <img width="225" height="133" alt="MERLIN birdstrike radar at US Air Force Bagram Aibase Afghanistan" src="http://www.detect-inc.com/images/MERLIN birdstrike radar at USAF Bagram Airbase Afghanistan.jpg"></img>
+
+                                        </p>
+                                        <p>
+
+                                            <strong>US Air Force 455th Air Expeditionary Wing, Bagram Airfield, Afghanistan</strong>
+
+                                             - MERLIN SS200m Aircraft Birdstrike Avoidance Radar System supporting coalition forces flight safety. The system includes special hardening and construction for the AOR with a heavy duty frame, Kevlar armoring, sand filters, redundant electronics and MILSPEC level design and components. This installation is the first deployment of a bird radar system to an active war zone.
+
+                                        </p>
+                                        <p align="center">
+
+                                            <img width="225" height="151" align="middle" alt="The first commercial airport to use a bird radar system oeprationally is the King Shaka Airport in Duban South Africa" src="http://www.detect-inc.com/images/MERLIN ABAR ATC Display in the tower at King Shaka airport Durban South Africa 1206.jpg"></img>
+
+                                        </p>
+                                        <p>
+
+                                            <strong>
+
+                                                King Shaka International Airport (DUR), Durban, South Africa 
+
+                                            </strong>
+                                            - MERLIN Aircraft Birdstrike Radar System installed in 2009 which represents the first use of real-time bird radar information in a commercial airport air traffic control tower operating under a national air traffic agency CONOPS. Durban is also the first permanent installation and use of a bird radar at a commercial airport (
+
+                                            <a target="_blank" style="text-decoration:underline;color:#555;" href="http://newswatch.nationalgeographic.com/2010/03/24/african_airport_slots_bird_flights/">
+
+                                                more information
+
+                                            </a>
+
+                                            ).
+
+                                        </p>
+                                        <p align="center">
+
+                                            <img width="225" height="173" alt="The MRLIN bird radar at the US Air Force Dare County Bombing…cumented record of reducing bird aircraft strikes since 2003" src="http://www.detect-inc.com/images/MERLIN birdstrike radar USAF Dare County Range.jpg"></img>
+
+                                        </p>
+                                        <p>
+
+                                            <strong>USAF Dare County Bombing Range, North Carolina, USA</strong>
+
+                                             -  MERLIN XS2530c Aircraft Birdstrike Avoidance Radar System installed on the range in 2003 and operated 24-7 with 99% uptime and a documented MTBR of 16,000 hours. Prior to use of the MERLIN system the range experienced 1-2 Class A (damage>$1 million) and 3-4 Class B ($500,000 to $1 million in damages) bird-aircraft strikes annually. Since the MERLIN technology went into operation, the range has had no Class A or B bird related mishaps in the areas covered by the MERLIN system saving the USAF over $4 million annually while increasing available airspace utilization by over 25%.
+
+                                        </p>
+                                        <p align="center">
+
+                                            <img width="225" height="128" alt="MERLIN bird strike radar system supporting USAF reconassance " src="http://www.detect-inc.com/images/MERLIN bird strike radar at USAF Beale AFB.jpg"></img>
+
+                                        </p>
+                                        <p>
+
+                                            <strong>
+
+                                                US Air Force Beale AFB 9th Reconnaissance Wing, California, USA
+
+                                            </strong>
+
+                                              - MERLIN XS2530m Aircraft Birdstrike Avoidance Radar system supporting the flight safety for the U-2 and RQ-4 Global Hawk with real-time detection and tracking of hazardous bird activity on the airfield and 8 miles around the airfield.
+
+                                        </p>
+                                        <p align="center">
+
+                                            <img width="225" height="158" align="middle" alt="MERLIN Aircraft Bird Strike Avoidance Radar system at US Navy Naval Air Station Kingsville Texas" src="http://www.detect-inc.com/images/MERLIN Aircraft Birdstrike Avoidance Radar - US Navy Kingsville Naval Air Station Texas.jpg"></img>
+
+                                        </p>
+                                        <p>
+
+                                            <strong>
+
+                                                US Navy Training Wing Two, Naval Air Station Kings…
+
+                                            </strong>
+
+                                             - Dual runway coverage MERLIN Aircraft Birdstrike Avoidance Radar system providing real-time detection, tracking and alerting of hazardous bird activity to flight control at the US Navy T-45 Goshawk training base. The system includes one horizontal S-band sensor and two vertical scanning radar sensors for simultaneous coverage of both crossed runways. The MERLIN system was selected through a competitive bid process and is under a two-year operating lease.
+                                        
+                                        </p>
+                                        <p align="center">
+
+                                            <img width="225" height="150" alt="MERLIn bird radar system supporting the bird control program…landfill located at the end of the Louisvill IAP main runway" src="http://www.detect-inc.com/images/MERLIN bird radar system at the Louisville Kentucky airport.jpg"></img>
+
+                                        </p>
+                                        <p>
+
+                                            <strong>
+
+                                                Louisville International Airport, Kentucky, USA
+
+                                            </strong>
+
+                                             - MERLIN XS2530i system installed on the Waste Management Outer Loop landfill located at the end of the airport main runway providing real-time monitoring and warning of hazardous bird activity to bird control units since 2004. The airport is the 4th largest freight airport in the US and the North American base for United Parcel Service.
+
+                                        </p>
+                                        <p align="center">
+
+                                            <img width="225" height="144" alt="MERLIN was used by NASA for bird strike launch safety on 22 space shuttle missions since 2006" src="http://www.detect-inc.com/images/MERLIN bird strike alerting radars at NASA KSC.jpg"></img>
+
+                                        </p>
+                                        <p>
+
+                                            <strong>
+
+                                                NASA Kennedy Space Center, Florida, USA
+
+                                            </strong>
+
+                                             - Two custom designed and manufactured MERLIN NASA Avian Awareness Devices (AAD) used by the US Space Agency to provide detection and tracking of hazardous vulture activity during 22 Space Shuttle launches from 2006 to the conclusion of the program in 2011. The MERLIN technology was selected by NASA after extensive evaluation and on-site testing of available technologies (
+
+                                            <a target="_blank" style="text-decoration:underline;color:#555;" href="http://www.nasa.gov/mission_pages/shuttle/behindscenes/avian_radar.html">more at the NASA website</a>
+
+                                            ).
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        
+
+    </div><!-- Footer -->
+        <footer>
+                <p align="center">
+                    Copyright &copy; 2003-2015 DeTect, Inc. www.detect-inc.com
+                </p>
+        </footer>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+﻿body {
+	padding: 0;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #F5F5F5;
+	background: url('images/page-background.png');
+	background-repeat: repeat-x;
+	float: none;
+}
+body, td {
+	font-family:Geneva,Geneva, Arial, Helvetica, sans-serif; 
+	font-size:10pt; 
+	line-height: normal;
+	font-weight: normal;
+	color:#666666;
+}
+p {margin: 5 0 5 0}
+ul {margin: 5 10 5 10}
+li {margin: 5 10 5 10}
+blockquote {margin: 5 15 5 15}
+h1 {font-family: Geneva, arial, Helvetica, sans-serif; font-size:18pt; font-weight:normal; color:#000000; margin:10px 0px 5px 0px}
+h2 {font-family:'Geneva',Geneva, Arial, Helvetica, sans-serif; font-size:12pt; color:#000000; margin:0}
+h3 {
+	font-family:'Geneva',Geneva, arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	font-weight: normal;
+	color: #000000;
+	margin: 8px 0px 5px 0px;
+}
+h5 {
+	font-family: 'Geneva',Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: normal;
+	color: #333333;
+	margin: 6px 0px 5px 0px;
+}
+h6 {font-family:'Geneva',Geneva, Arial, Helvetica, sans-serif; font-size:10pt; color:#777777; margin:0}
+
+a:active     { text-decoration: none; color: #2C42BE }
+a:link       {
+	color: #003399;
+	font-weight: normal;
+	text-decoration: none;
+}
+a:visited    {
+	color: #003399;
+	font-weight: normal;
+	text-decoration: none;
+}
+a:hover      {
+	color: #FF6600;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+.LogoBanner {background:url('images/banner_top_970n.png');}
+.LogoBannertest {background:url('images/banner-top.png');background-repeat:no-repeat}
+.LogoText {padding-left:70; font-family:Century Gothic,Verdana,Arial; font-size:20px;color:#D8E8F3}
+.TitleCell 	{
+	border-collapse: collapse;
+	text-align: left;
+	text-decoration: none;
+	font-family: Geneva,"Geneva", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif  MS, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 13px;
+	color: #333333;
+	padding-left: 12px;
+}
+.ContainerCell {
+	border-collapse: collapse;
+	padding: 20px;
+	text-decoration: none;
+	text-align: left;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 10pt;
+	line-height:normal;
+	color:#666666;
+	vertical-align: top;
+	background-color: #FFFFFF;
+	line-height:normal;
+}
+.ContainerSubCell {
+	border-collapse: collapse;
+	padding: 10px;
+	text-decoration: none;
+	text-align: left;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 10pt;
+	line-height: normal;
+	color: #666666;
+	vertical-align: top;
+	background-color: #FFFFFF;
+	line-height: normal;
+}
+.bluecomment {
+	font-family: Geneva, Geneva, arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	line-height: normal;
+	color: #0099CC;
+	text-align: inherit;
+}
+
+
+.Whitecell {padding:12; border-style:solid; border-width:1; border-color:#add2e8; background:white; text-decoration:none; font-family:Arial; font-weight:normal ;font-size:12pt; color:#000000; vertical-align: middle;}
+.Essentialscell {padding:15; border-style:solid; border-width:0; border-color:#add2e8; text-decoration:none; font-family:Arial; font-weight:normal ;font-size:12pt; color:#000000; margin: 4px 4px 4px 4px ; vertical-align: middle; background: url('template/cnt_bg.png')}
+.MainTable {width:990px; height:auto; vertical-align: top; border-collapse: collapse; border-width: 0;}
+.SubTable {margin: 0; padding: 8; border: 0; vertical-align: top; border-collapse: collapse;}
+.ContainerTable {margin: 0; padding: 0; border: 0; vertical-align: top; border-collapse: collapse;}
+.Container {width:auto; height:auto;}
+.SubCell {width:auto; height:auto;}
+.CalendarButton {font-family:Arial; font-size:12px;}
+
+.CntTopLeft[class]      {background: url('template/cnt_top_left.png') }
+.CntTopLeftg[class]     {background: url('template/cnt_top_left.png') }
+.CntTopLeft2            {background: url('template/cnt_top_leftg.png') top center;}
+.CntTopCenter[class]    {background: url('template/cnt_top_center.png');}
+.CntTopCenterg[class]   {background: url('template/cnt_top_centerg.png');}
+.CntTopCenter2          {background: url('template/cnt_top_centerg.png') top center;}
+.CntTopRight[class]     {background: url('template/cnt_top_right.png');}
+.CntTopRightg[class]    {background: url('template/cnt_top_right.png');}
+.CntTopRight2           {background: url('template/cnt_top_rightg.png') top center;}
+.CntLeft[class]         {background: url('template/cnt_left.png');}
+.CntMiddle              {background: url('template/cnt_bg.png');}
+.CntRight[class]        {background: url('template/cnt_right.png');}
+.CntBottomLeft[class]   {background: url('template/cnt_bottom_left.png');}
+.CntBottomCenter[class] {background: url('template/cnt_bottom_center.png');}
+.CntBottomRight[class]  {background: url('template/cnt_bottom_right.png');}
+
+.CntTopLeft      {width: 7px; height: 34px;
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='template/cnt_top_left.png');}
+.CntTopLeftg     {width: 7px; height: 34px;
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='template/cnt_top_left.png');}
+.CntTopLeft2      {width: 7px; height: 5px; 
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='template/cnt_top_leftg.png'); background-position: top left;}
+.CntTopCenter    {height: 34px; 
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='template/cnt_top_center.png');}
+.CntTopCenterg   {height: 22px; 
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='template/cnt_top_centerg.png');}
+.CntTopCenter2    {background: top center; height: 5px;
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='template/cnt_top_centerg.png'); } 
+.CntTopRight     {width: 7px; height: 34px; 
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='template/cnt_top_right.png');}
+.CntTopRightg     {width: 7px; height: 34px; 
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='template/cnt_top_right.png');}
+.CntTopRight2     {width: 7px; height: 5px; 
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='template/cnt_top_rightg.png'); background-position: top center;} 
+.CntLeft         {width: 7px; 
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='template/cnt_left.png');}
+.CntRight        {width: 7px; 
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='template/cnt_right.png');}
+.CntBottomLeft   {width: 7px; height: 9px; 
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='template/cnt_bottom_left.png');}
+.CntBottomCenter {height: 9px; 
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='template/cnt_bottom_center.png');}
+.CntBottomRight  {width: 7px; height: 9px; 
+                  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='template/cnt_bottom_right.png');}
+                  
+/* Submit Buttons */
+input.btnsubmit{
+   color:yellow;
+   font-family:'Geneva',helvetica,sans-serif;
+   font-size:84%;
+   background-color:#a24b06;
+   border:1px dotted #FF6600;
+   height: 20px;}
+   
+/* Disabled Calendar Buttons */
+input.btndsl{
+   color:#050;
+   font-family:'Geneva',helvetica,sans-serif;
+   font-size:84%;
+   background-color:#666666;
+   border:1px solid #444444;
+   width: 20px;
+   height: 20px;}
+   
+/* Selected Dates Buttons */
+input.btncurr{
+   color:#050;
+   font-family:'Geneva',helvetica,sans-serif;
+   font-size:84%;
+   background-color:lightgreen;
+   border:1px solid;
+   width: 20px;
+   height: 20px;}
+   
+/* Dates that can be selected */
+input.btnopen{
+   color:#050;
+   font-family:'Geneva',helvetica,sans-serif;
+   font-size:84%;
+   background-color:#dddddd;
+   border:1px solid;
+   width: 20px;
+   height: 20px;}
+.pagetop1 {
+	clip: rect(0px, 0px, 0px, 0px);
+	width: 970px;
+	height: 135px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	/*background-image: url('images/banner-top.png');
+	background-repeat: no-repeat;*/
+	position: relative;
+	margin-bottom: 27px;
+}
+.pagetopcontact {
+	width: 280px;
+	height: 30px;
+	left: 680px;
+	position: absolute;
+	top: 10px;
+	font-size: 8pt;
+	font-family: Geneva, Arial , Helvetica, sans-serif;
+	color: #999999;
+}
+.pagetopform {
+	width: 280px;
+	height: 30px;
+	left: 680px;
+	position: absolute;
+	top: 55px;
+}
+.pagetopmenu {
+	position: absolute;
+	top: 97px;
+	height: 44;
+	left: 0;
+	right: 0;
+	width: 970;
+}
+.pagetopcssmenu {
+	position: absolute;
+	top: 96px;
+	height: 44;
+	left: 30px;
+	right: 0;
+	width: 970;
+	z-index: 25;
+}
+
+.pagebottom0 {
+	text-align: center;
+	margin-left: 10px;
+	margin-right: 20px;
+}
+.pagebottom1 {
+	clip: auto;
+	text-align: center;
+}
+.pagebottom2 {
+	text-align: center;
+}
+.pagebottom3 {
+	top: 80px;
+	left: 0px;
+	width: 970px;
+	height: 40px;
+	margin-top: 20px;
+}
+.pagebottom4 {
+	width: 970px;
+	position: relative;
+	padding: 10px,0px,10px,0px;
+	margin-top: 10px;
+	left: 0px;
+	height: 120px;
+}
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+    border-color: #ffffff;
+}
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+    border-color: #7587c3;
+    background-color: #485fac;
+    background-image: none;
+    filter: none;
+}

@@ -1,0 +1,17 @@
+.main-nav {
+  position:fixed;
+  background-color:#000;
+  opacity:.92;
+}
+.logo {
+  z-index: 12000;
+  float: left;
+  width: 250px;
+  height:55px;
+}
+.nav ul {
+  text-align:center;
+}
+.wide {
+  width:100%;
+}
